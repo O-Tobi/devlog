@@ -1,4 +1,5 @@
 from rest_framework import generics
+from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from .models import User
 from .serializers import RegisterSerializer
@@ -15,9 +16,9 @@ class RegisterView(generics.CreateAPIView):
     permission_classes = [AllowAny]
 
 # Logout endpoint view
-class LogoutView(generics.APIView):
+class LogOutView(APIView):
     # allow only authenticated user to call this function
-    permission_classes = (IsAuthenticated,)
+    permission_classes = [IsAuthenticated]
 
     # get refresh token from the client
     def post( self, request):
