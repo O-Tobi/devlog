@@ -26,5 +26,3 @@ class CreateLogSerializer(serializers.ModelSerializer):
             user=user,
             **validated_data
         )
-
-

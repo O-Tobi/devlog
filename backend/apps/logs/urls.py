@@ -6,3 +6,5 @@ urlpatterns = [
     path("log-create/", LogListCreateView.as_view(), name="logs-list-create"),
     path("logs/<int:pk>/", LogDetailView.as_view(), name="logs-detail"),
 ]
+
+# test log CRUD
