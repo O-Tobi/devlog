@@ -23,3 +23,4 @@ class CreateSkillSerializer(serializers.ModelSerializer):
             user=user,
             **validated_data
         )
+
