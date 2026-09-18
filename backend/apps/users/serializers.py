@@ -29,8 +29,6 @@ class RegisterSerializer(serializers.ModelSerializer):
         return attrs
 
 
-    # Question: How does the create method in RegisterSerializer
-    # knows what validated_data is since validat function did not rename anything as validated_data?
     def create(self, validated_data):
         validated_data.pop("password2")
 
